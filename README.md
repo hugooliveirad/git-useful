@@ -1,6 +1,27 @@
 # git-useful
 > a collection of incredibly useful git commands
 
+## Table of Contents
+- [Add](#add)
+    - [add files interactively](#add-files-interactively)
+- [Log](#log)
+    - [shows commit frequency for each user in the repo](#shows-commit-frequency-for-each-user-in-the-repo)
+    - [pretty log (one line with graphic and colors)](#pretty-log-one-line-with-graphic-and-colors)
+    - [logs commits that added or removed a certain keyword](#logs-commits-that-added-or-removed-a-certain-keyword)
+- [Diff](#diff)
+    - [diff word-by-word](#diff-word-by-word)
+    - [short infos about changes in a commit](#short-infos-about-changes-in-a-commit)
+    - [show changed files in a commit](#show-changed-files-in-a-commit)
+    - [list every changed file between two commits](#list-every-changed-file-between-two-commits)
+    - [show modifications in a file in a commit](#show-modifications-in-a-file-in-a-commit)
+    - [show files with conflicts](#show-files-with-conflicts)
+- [Misc](#misc)
+    - [sync fork](#sync-fork)
+    - [assume file as unchanged](#assume-file-as-unchanged)
+    - [undo assume file as unchanged](#undo-assume-file-as-unchanged)
+    - [list files assumed as unchanged](#list-files-assumed-as-unchanged)
+- [Others](#others)
+
 ## Add
 
 #### add files interactively
