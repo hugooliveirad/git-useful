@@ -117,7 +117,7 @@ source: http://stackoverflow.com/questions/3065650/whats-the-simplest-way-to-git
 ```bash
 # Requires an "upstream" remote, pointing to original repo
 # e.g. `git remote add upstream git@github.com:user/repo.git`
-git fetch upstream; git checkout master; git merge upstream/master
+git fetch upstream; git checkout master; git rebase upstream/master
 ```
 source: https://help.github.com/articles/syncing-a-fork
 
