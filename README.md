@@ -17,7 +17,7 @@
     - [show modifications in a file in a commit](#show-modifications-in-a-file-in-a-commit)
     - [show files with conflicts](#show-files-with-conflicts)
 - [Branch](#branch)
-    - [deletes already-merged branches](deletes-already-merged-branches)
+    - [deletes already-merged branches](#deletes-already-merged-branches)
 - [Misc](#misc)
     - [sync fork](#sync-fork)
     - [assume file as unchanged](#assume-file-as-unchanged)
