@@ -8,6 +8,7 @@
     - [shows commit frequency for each user in the repo](#shows-commit-frequency-for-each-user-in-the-repo)
     - [pretty log (one line with graphic and colors)](#pretty-log-one-line-with-graphic-and-colors)
     - [logs commits that added or removed a certain keyword](#logs-commits-that-added-or-removed-a-certain-keyword)
+    - [lists already-merged branches](#lists-already-merged-branches)
 - [Diff](#diff)
     - [diff word-by-word](#diff-word-by-word)
     - [short infos about changes in a commit](#short-infos-about-changes-in-a-commit)
@@ -15,6 +16,8 @@
     - [list every changed file between two commits](#list-every-changed-file-between-two-commits)
     - [show modifications in a file in a commit](#show-modifications-in-a-file-in-a-commit)
     - [show files with conflicts](#show-files-with-conflicts)
+- [Branch](#branch)
+    - [deletes already-merged branches](deletes-already-merged-branches)
 - [Misc](#misc)
     - [sync fork](#sync-fork)
     - [assume file as unchanged](#assume-file-as-unchanged)
@@ -54,6 +57,19 @@ git log \
 git log -S '<keyword>'
 ```
 source: http://mislav.uniqpath.com/2014/02/hidden-documentation/
+
+### lists already-merged branches
+```bash
+git branch --merged [<branch>]
+
+# working examples
+git branch --merged master
+
+# in the current HEAD
+git branch --merged
+```
+
+source: http://stevenharman.net/git-clean-delete-already-merged-branches
 
 ## Diff
 
@@ -110,6 +126,16 @@ git diff --name-only --diff-filter=U
 ```
 
 source: http://stackoverflow.com/questions/3065650/whats-the-simplest-way-to-git-a-list-of-conflicted-files
+
+## Branch
+
+#### deletes already-merged branches
+
+```bash
+git branch --merged | grep -v "\*" | xargs -n 1 git branch -d
+```
+
+source: http://stevenharman.net/git-clean-delete-already-merged-branches
 
 ## Misc
 
