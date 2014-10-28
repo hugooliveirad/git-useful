@@ -18,6 +18,7 @@
     - [show files with conflicts](#show-files-with-conflicts)
 - [Branch](#branch)
     - [deletes already-merged branches](#deletes-already-merged-branches)
+    - [add new branch and switches to this branch](#add-new-branch-and-switches-to-this-branch)
 - [Misc](#misc)
     - [sync fork](#sync-fork)
     - [assume file as unchanged](#assume-file-as-unchanged)
@@ -136,6 +137,14 @@ git branch --merged | grep -v "\*" | xargs -n 1 git branch -d
 ```
 
 source: http://stevenharman.net/git-clean-delete-already-merged-branches
+
+#### add new branch and switches to this branch
+
+```bash
+git checkout -b new_branch
+```
+
+source: http://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
 
 ## Misc
 
