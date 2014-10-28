@@ -142,6 +142,9 @@ source: http://stevenharman.net/git-clean-delete-already-merged-branches
 
 ```bash
 git checkout -b <branch>
+
+# working example
+git checkout -b new_branch
 ```
 
 source: http://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
