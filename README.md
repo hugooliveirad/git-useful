@@ -141,7 +141,7 @@ source: http://stevenharman.net/git-clean-delete-already-merged-branches
 #### add new branch and switches to this branch
 
 ```bash
-git checkout -b new_branch
+git checkout -b <branch>
 ```
 
 source: http://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
