@@ -4,6 +4,7 @@
 ## Table of Contents
 - [Add](#add)
     - [add files interactively](#add-files-interactively)
+    - [add all changes ignoring whitespace changes](#add-all-changes-ignoring-whitespace-changes)
 - [Log](#log)
     - [shows commit frequency for each user in the repo](#shows-commit-frequency-for-each-user-in-the-repo)
     - [pretty log (one line with graphic and colors)](#pretty-log-one-line-with-graphic-and-colors)
@@ -36,6 +37,14 @@ git add <file> --patch
 git add . --patch
 ```
 Very useful when you need to commit different lines of a file. See more at the docs for [Interactive Mode](http://git-scm.com/docs/git-add#_interactive_mode).
+
+#### add all changes ignoring whitespace changes
+```bash
+git diff -w --no-color | git apply --cached --ignore-whitespace
+```
+That time when your editor removed all trailing spaces
+
+source: http://stackoverflow.com/questions/3515597/git-add-only-non-whitespace-changes
 
 ## Log
 
