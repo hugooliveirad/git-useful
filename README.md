@@ -25,6 +25,8 @@
     - [assume file as unchanged](#assume-file-as-unchanged)
     - [undo assume file as unchanged](#undo-assume-file-as-unchanged)
     - [list files assumed as unchanged](#list-files-assumed-as-unchanged)
+- [Clean](#clean)
+    - [remove untracked files](#remove-untracked-files)
 - [Others](#others)
 
 ## Add
@@ -192,6 +194,19 @@ git ls-files -v|grep '^h'
 ```
 
 source: http://stackoverflow.com/questions/17195861/undo-a-git-update-index-assume-unchanged-file
+
+## Clean
+
+#### remove untracked files
+```bash
+# list files that would be removed
+git clean -f -n
+
+# remove untracked files
+git clean -f
+```
+
+source: http://stackoverflow.com/questions/61212/how-do-i-remove-local-untracked-files-from-my-current-git-branch
 
 ## Others
 More than one line command useful things
