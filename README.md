@@ -10,6 +10,7 @@
     - [pretty log (one line with graphic and colors)](#pretty-log-one-line-with-graphic-and-colors)
     - [logs commits that added or removed a certain keyword](#logs-commits-that-added-or-removed-a-certain-keyword)
     - [lists already-merged branches](#lists-already-merged-branches)
+    - [list authors by commits](#list-authors-by-commits)
 - [Diff](#diff)
     - [diff word-by-word](#diff-word-by-word)
     - [short infos about changes in a commit](#short-infos-about-changes-in-a-commit)
@@ -27,6 +28,8 @@
     - [list files assumed as unchanged](#list-files-assumed-as-unchanged)
 - [Clean](#clean)
     - [remove untracked files](#remove-untracked-files)
+- [Auditing](#auditing)
+    
 - [Others](#others)
 
 ## Add
@@ -82,6 +85,27 @@ git branch --merged
 ```
 
 source: http://stevenharman.net/git-clean-delete-already-merged-branches
+
+
+#### list authors by commits
+```bash
+git shortlog -sn <branch>
+
+# working example
+git shortlog -sn master
+```
+
+source: http://codeinthehole.com/writing/command-line-tips-for-effective-release-announcements/
+
+#### list commits by authors between revisions
+```bash
+git shortlog <rev1>..<rev2> --no-merges
+
+# working example
+git shortlog master..HEAD --no-merges
+```
+
+source: http://codeinthehole.com/writing/command-line-tips-for-effective-release-announcements/ 
 
 ## Diff
 
@@ -207,6 +231,9 @@ git clean -f
 ```
 
 source: http://stackoverflow.com/questions/61212/how-do-i-remove-local-untracked-files-from-my-current-git-branch
+
+## Auditing
+
 
 ## Others
 More than one line command useful things
