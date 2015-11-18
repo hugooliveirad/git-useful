@@ -11,6 +11,7 @@
     - [logs commits that added or removed a certain keyword](#logs-commits-that-added-or-removed-a-certain-keyword)
     - [lists already-merged branches](#lists-already-merged-branches)
     - [list authors by commits](#list-authors-by-commits)
+    - [list tags by date](#list-tags-by-date)
 - [Diff](#diff)
     - [diff word-by-word](#diff-word-by-word)
     - [short infos about changes in a commit](#short-infos-about-changes-in-a-commit)
@@ -106,6 +107,13 @@ git shortlog master..HEAD --no-merges
 ```
 
 source: http://codeinthehole.com/writing/command-line-tips-for-effective-release-announcements/ 
+
+#### list tags by date
+```bash
+git for-each-ref --sort=taggerdate --format '%(refname) %(taggerdate)' refs/tags
+```
+
+source: http://stackoverflow.com/questions/6269927/how-can-i-list-all-tags-in-my-git-repository-by-the-date-they-were-created
 
 ## Diff
 
