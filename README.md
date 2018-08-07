@@ -56,8 +56,8 @@ source: http://stackoverflow.com/questions/3515597/git-add-only-non-whitespace-c
 
 #### shows commit frequency for each user in the repo
 ```bash
-git log --format='%an' . | \
-    sort | uniq -c | sort -rn | head
+git shortlog --numbered --summary --all --no-merges \
+  | head
 ```
 source: http://mislav.uniqpath.com/2014/02/hidden-documentation/
 
@@ -90,10 +90,10 @@ source: http://stevenharman.net/git-clean-delete-already-merged-branches
 
 #### list authors by commits
 ```bash
-git shortlog -sn <branch>
+git shortlog --summary --numbered --no-merges <branch>
 
 # working example
-git shortlog -sn master
+git shortlog --summary --numbered --no-merges master
 ```
 
 source: http://codeinthehole.com/writing/command-line-tips-for-effective-release-announcements/
